@@ -25,6 +25,7 @@ public class Temporada {
 
     public void setFechaFinal(Date fechaFinal) {
         this.fechaFinal = fechaFinal;
+    
     }
     
 }
