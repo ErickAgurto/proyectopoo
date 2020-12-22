@@ -1,14 +1,17 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Bases;
-
-/**
- *
- * @author erick
- */
 public class Fixture {
+    private Partido[] matches;
+
+    public Fixture(Partido[] matches) {
+        this.matches = matches;
+    }
+
+    public Partido[] getMatches() {
+        return matches;
+    }
+
+    public void setMatches(Partido[] matches) {
+        this.matches = matches;
+    }
     
 }

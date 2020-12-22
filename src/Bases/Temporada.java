@@ -1,14 +1,30 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Bases;
 
-/**
- *
- * @author erick
- */
+import java.util.Date;
+
 public class Temporada {
+    private Date fechaInicio;
+    private Date fechaFinal;
+
+    public Temporada(Date fechaInicio, Date fechaFinal) {
+        this.fechaInicio = fechaInicio;
+        this.fechaFinal = fechaFinal;
+    }
+
+    public Date getFechaInicio() {
+        return fechaInicio;
+    }
+
+    public Date getFechaFinal() {
+        return fechaFinal;
+    }
+
+    public void setFechaInicio(Date fechaInicio) {
+        this.fechaInicio = fechaInicio;
+    }
+
+    public void setFechaFinal(Date fechaFinal) {
+        this.fechaFinal = fechaFinal;
+    }
     
 }
