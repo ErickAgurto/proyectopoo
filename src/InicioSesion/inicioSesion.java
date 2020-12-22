@@ -21,7 +21,7 @@ public class inicioSesion extends javax.swing.JFrame {
         etiquetaContrasena = new javax.swing.JLabel();
         cajaContrasena = new javax.swing.JPasswordField();
         botonIngreso = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        botonRegistrarse = new javax.swing.JButton();
         etiquetaIngreseID1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -106,13 +106,13 @@ public class inicioSesion extends javax.swing.JFrame {
         botonIngreso.setBorderPainted(false);
         botonIngreso.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
-        jButton1.setBackground(new java.awt.Color(255, 255, 255));
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/login.png"))); // NOI18N
-        jButton1.setToolTipText("");
-        jButton1.setBorder(null);
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        botonRegistrarse.setBackground(new java.awt.Color(255, 255, 255));
+        botonRegistrarse.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/login.png"))); // NOI18N
+        botonRegistrarse.setToolTipText("");
+        botonRegistrarse.setBorder(null);
+        botonRegistrarse.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                botonRegistrarseActionPerformed(evt);
             }
         });
 
@@ -142,7 +142,7 @@ public class inicioSesion extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(etiquetaIngreseID1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(botonRegistrarse, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18))))
         );
         panelDeInicioLayout.setVerticalGroup(
@@ -151,7 +151,7 @@ public class inicioSesion extends javax.swing.JFrame {
             .addGroup(panelDeInicioLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(panelDeInicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(botonRegistrarse, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(etiquetaIngreseID1, javax.swing.GroupLayout.DEFAULT_SIZE, 26, Short.MAX_VALUE))
                 .addGap(15, 15, 15)
                 .addComponent(etiquetaPanel)
@@ -186,9 +186,9 @@ public class inicioSesion extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_cajaIDActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void botonRegistrarseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonRegistrarseActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_botonRegistrarseActionPerformed
 
     /**
      * @param args the command line arguments
@@ -227,6 +227,7 @@ public class inicioSesion extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton botonIngreso;
+    private javax.swing.JButton botonRegistrarse;
     private javax.swing.JPasswordField cajaContrasena;
     private javax.swing.JTextField cajaID;
     private javax.swing.JLabel etiquetaBienvenida;
@@ -236,7 +237,6 @@ public class inicioSesion extends javax.swing.JFrame {
     private javax.swing.JLabel etiquetaPanel;
     private javax.swing.JLabel etiquetaTorneo;
     private javax.swing.JLabel iconoTorneo;
-    private javax.swing.JButton jButton1;
     private javax.swing.JPanel panelDeInicio;
     private javax.swing.JPanel panelLogo;
     // End of variables declaration//GEN-END:variables
