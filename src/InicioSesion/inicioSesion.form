@@ -3,6 +3,7 @@
 <Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
+    <Property name="undecorated" type="boolean" value="true"/>
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
@@ -23,7 +24,7 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="panelDeInicio" min="-2" max="-2" attributes="0"/>
+          <Component id="panelDeInicio" alignment="0" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
@@ -47,23 +48,21 @@
                   <Component id="panelLogo" min="-2" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
-                          <EmptySpace min="39" pref="39" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="64" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="etiquetaIngreseID" min="-2" max="-2" attributes="0"/>
-                              <Component id="cajaID" max="32767" attributes="0"/>
-                              <Component id="etiquetaContrasena" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="etiquetaPanel" alignment="0" pref="401" max="32767" attributes="0"/>
-                              <Component id="cajaContrasena" max="32767" attributes="0"/>
-                              <Component id="botonIngreso" max="32767" attributes="0"/>
+                              <Component id="etiquetaContrasena" min="-2" max="-2" attributes="0"/>
+                              <Component id="etiquetaIngreseID" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="etiquetaPanel" pref="430" max="32767" attributes="0"/>
+                              <Component id="cajaID" alignment="0" max="32767" attributes="0"/>
+                              <Component id="cajaContrasena" alignment="0" max="32767" attributes="0"/>
+                              <Component id="botonIngresar" alignment="0" max="32767" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="40" max="32767" attributes="0"/>
+                          <EmptySpace pref="62" max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
                           <EmptySpace max="32767" attributes="0"/>
-                          <Component id="etiquetaIngreseID1" min="-2" max="-2" attributes="0"/>
+                          <Component id="botonCerrar" min="-2" pref="28" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="botonRegistrarse" min="-2" pref="26" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -74,23 +73,20 @@
               <Component id="panelLogo" alignment="0" max="32767" attributes="0"/>
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="botonRegistrarse" max="32767" attributes="0"/>
-                      <Component id="etiquetaIngreseID1" pref="26" max="32767" attributes="0"/>
-                  </Group>
-                  <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
+                  <Component id="botonCerrar" min="-2" pref="30" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
                   <Component id="etiquetaPanel" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
+                  <EmptySpace pref="44" max="32767" attributes="0"/>
                   <Component id="etiquetaIngreseID" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Component id="cajaID" min="-2" pref="34" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="cajaID" min="-2" pref="34" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
                   <Component id="etiquetaContrasena" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="cajaContrasena" min="-2" pref="34" max="-2" attributes="0"/>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="botonIngreso" min="-2" pref="40" max="-2" attributes="0"/>
-                  <EmptySpace pref="65" max="32767" attributes="0"/>
+                  <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
+                  <Component id="botonIngresar" min="-2" pref="40" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -142,7 +138,7 @@
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/Img/soccer-ball.png"/>
+                  <Image iconType="3" name="/Img/logoLogin.png"/>
                 </Property>
               </Properties>
             </Component>
@@ -155,7 +151,7 @@
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
                 <Property name="horizontalAlignment" type="int" value="0"/>
-                <Property name="text" type="java.lang.String" value="LIGA PERUANA DE FUTBOL"/>
+                <Property name="text" type="java.lang.String" value="LIGA DE FUTBOL"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="etiquetaBienvenida">
@@ -197,7 +193,6 @@
         </Component>
         <Component class="javax.swing.JTextField" name="cajaID">
           <Properties>
-            <Property name="text" type="java.lang.String" value=" Ingrese su usuario"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                 <LineBorder>
@@ -234,7 +229,7 @@
             <Property name="name" type="java.lang.String" value="" noResource="true"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="botonIngreso">
+        <Component class="javax.swing.JButton" name="botonIngresar">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="66" green="33" red="0" type="rgb"/>
@@ -247,44 +242,37 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Ingresar"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-              <Border info="null"/>
+              <Border info="org.netbeans.modules.form.compat2.border.SoftBevelBorderInfo">
+                <BevelBorder/>
+              </Border>
             </Property>
             <Property name="borderPainted" type="boolean" value="false"/>
             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
               <Color id="Cursor Por defecto"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonIngresarActionPerformed"/>
+          </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="botonRegistrarse">
+        <Component class="javax.swing.JButton" name="botonCerrar">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/Img/login.png"/>
+              <Image iconType="3" name="/Img/close.png"/>
             </Property>
-            <Property name="toolTipText" type="java.lang.String" value=""/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-              <Border info="null"/>
+              <Border info="org.netbeans.modules.form.compat2.border.CompoundBorderInfo">
+                <CompoundBorder/>
+              </Border>
             </Property>
+            <Property name="focusable" type="boolean" value="false"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonRegistrarseActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonCerrarActionPerformed"/>
           </Events>
-        </Component>
-        <Component class="javax.swing.JLabel" name="etiquetaIngreseID1">
-          <Properties>
-            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="ff" green="ff" red="ff" type="rgb"/>
-            </Property>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Segoe UI Semilight" size="14" style="1"/>
-            </Property>
-            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="99" green="99" red="99" type="rgb"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="Regitrarse"/>
-          </Properties>
         </Component>
       </SubComponents>
     </Container>
