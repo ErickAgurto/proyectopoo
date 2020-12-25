@@ -16,6 +16,15 @@ public class ventJugador extends javax.swing.JFrame {
         iconoTorneo = new javax.swing.JLabel();
         etiquetaTorneo = new javax.swing.JLabel();
         etiquetaBienvenida = new javax.swing.JLabel();
+        scroolJugador = new javax.swing.JScrollPane();
+        tablaJugador = new javax.swing.JTable();
+        encabezadoJugador = new javax.swing.JLabel();
+        botonAgregar = new javax.swing.JButton();
+        botonEliminar = new javax.swing.JButton();
+        botonRetroceder = new javax.swing.JButton();
+        etiquetaAgregar = new javax.swing.JLabel();
+        etiquetaEliminar = new javax.swing.JLabel();
+        etiquetaRetroceder = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -72,8 +81,78 @@ public class ventJugador extends javax.swing.JFrame {
                 .addComponent(etiquetaBienvenida)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(etiquetaTorneo, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(130, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
+
+        tablaJugador.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
+        tablaJugador.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4", "Title 5", "Title 6"
+            }
+        ));
+        tablaJugador.setCellSelectionEnabled(true);
+        scroolJugador.setViewportView(tablaJugador);
+
+        encabezadoJugador.setFont(new java.awt.Font("Segoe UI", 0, 22)); // NOI18N
+        encabezadoJugador.setForeground(new java.awt.Color(255, 153, 0));
+        encabezadoJugador.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        encabezadoJugador.setText("Registo de Jugadores");
+
+        botonAgregar.setBackground(new java.awt.Color(255, 255, 255));
+        botonAgregar.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        botonAgregar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/logoAgregar.png"))); // NOI18N
+        botonAgregar.setToolTipText("");
+        botonAgregar.setBorder(null);
+        botonAgregar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonAgregarActionPerformed(evt);
+            }
+        });
+
+        botonEliminar.setBackground(new java.awt.Color(255, 255, 255));
+        botonEliminar.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        botonEliminar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/logoEliminar.png"))); // NOI18N
+        botonEliminar.setToolTipText("");
+        botonEliminar.setBorder(null);
+        botonEliminar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonEliminarActionPerformed(evt);
+            }
+        });
+
+        botonRetroceder.setBackground(new java.awt.Color(255, 255, 255));
+        botonRetroceder.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        botonRetroceder.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/logoRetroceder.png"))); // NOI18N
+        botonRetroceder.setToolTipText("");
+        botonRetroceder.setBorder(null);
+        botonRetroceder.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonRetrocederActionPerformed(evt);
+            }
+        });
+
+        etiquetaAgregar.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        etiquetaAgregar.setForeground(new java.awt.Color(102, 102, 102));
+        etiquetaAgregar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        etiquetaAgregar.setText("AGREGAR");
+
+        etiquetaEliminar.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        etiquetaEliminar.setForeground(new java.awt.Color(102, 102, 102));
+        etiquetaEliminar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        etiquetaEliminar.setText("ELIMINAR");
+
+        etiquetaRetroceder.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        etiquetaRetroceder.setForeground(new java.awt.Color(102, 102, 102));
+        etiquetaRetroceder.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        etiquetaRetroceder.setText("RETROCEDER");
 
         javax.swing.GroupLayout panelJugadorLayout = new javax.swing.GroupLayout(panelJugador);
         panelJugador.setLayout(panelJugadorLayout);
@@ -81,17 +160,67 @@ public class ventJugador extends javax.swing.JFrame {
             panelJugadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelJugadorLayout.createSequentialGroup()
                 .addComponent(panelLogo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 521, Short.MAX_VALUE)
-                .addComponent(botonCerrar)
-                .addContainerGap())
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 56, Short.MAX_VALUE)
+                .addGroup(panelJugadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelJugadorLayout.createSequentialGroup()
+                        .addComponent(botonCerrar)
+                        .addContainerGap())
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelJugadorLayout.createSequentialGroup()
+                        .addGroup(panelJugadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(panelJugadorLayout.createSequentialGroup()
+                                .addGap(59, 59, 59)
+                                .addGroup(panelJugadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(etiquetaAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(panelJugadorLayout.createSequentialGroup()
+                                        .addGap(10, 10, 10)
+                                        .addComponent(botonAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGroup(panelJugadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(panelJugadorLayout.createSequentialGroup()
+                                        .addGap(126, 126, 126)
+                                        .addComponent(botonEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(121, 121, 121)
+                                        .addComponent(botonRetroceder))
+                                    .addGroup(panelJugadorLayout.createSequentialGroup()
+                                        .addGap(117, 117, 117)
+                                        .addComponent(etiquetaEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(96, 96, 96)
+                                        .addComponent(etiquetaRetroceder, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addGroup(panelJugadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(encabezadoJugador, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(scroolJugador, javax.swing.GroupLayout.DEFAULT_SIZE, 550, Short.MAX_VALUE)))
+                        .addGap(50, 50, 50))))
         );
         panelJugadorLayout.setVerticalGroup(
             panelJugadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(panelLogo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(panelJugadorLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(botonCerrar)
-                .addContainerGap(414, Short.MAX_VALUE))
-            .addComponent(panelLogo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(panelJugadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panelJugadorLayout.createSequentialGroup()
+                        .addGap(19, 19, 19)
+                        .addComponent(encabezadoJugador)
+                        .addGap(32, 32, 32)
+                        .addComponent(scroolJugador, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(31, 31, 31)
+                        .addGroup(panelJugadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(botonAgregar)
+                            .addComponent(botonEliminar))
+                        .addGroup(panelJugadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(panelJugadorLayout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, 19, Short.MAX_VALUE)
+                                .addGroup(panelJugadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(etiquetaAgregar)
+                                    .addComponent(etiquetaRetroceder))
+                                .addGap(24, 24, 24))
+                            .addGroup(panelJugadorLayout.createSequentialGroup()
+                                .addGap(18, 18, 18)
+                                .addComponent(etiquetaEliminar)
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelJugadorLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(botonRetroceder, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(69, 69, 69))))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -111,6 +240,18 @@ public class ventJugador extends javax.swing.JFrame {
     private void botonCerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCerrarActionPerformed
         System.exit(0);
     }//GEN-LAST:event_botonCerrarActionPerformed
+
+    private void botonAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAgregarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_botonAgregarActionPerformed
+
+    private void botonEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonEliminarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_botonEliminarActionPerformed
+
+    private void botonRetrocederActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonRetrocederActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_botonRetrocederActionPerformed
 
     /**
      * @param args the command line arguments
@@ -151,11 +292,20 @@ public class ventJugador extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton botonAgregar;
     private javax.swing.JButton botonCerrar;
+    private javax.swing.JButton botonEliminar;
+    private javax.swing.JButton botonRetroceder;
+    private javax.swing.JLabel encabezadoJugador;
+    private javax.swing.JLabel etiquetaAgregar;
     private javax.swing.JLabel etiquetaBienvenida;
+    private javax.swing.JLabel etiquetaEliminar;
+    private javax.swing.JLabel etiquetaRetroceder;
     private javax.swing.JLabel etiquetaTorneo;
     private javax.swing.JLabel iconoTorneo;
     private javax.swing.JPanel panelJugador;
     private javax.swing.JPanel panelLogo;
+    private javax.swing.JScrollPane scroolJugador;
+    private javax.swing.JTable tablaJugador;
     // End of variables declaration//GEN-END:variables
 }

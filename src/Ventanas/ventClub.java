@@ -16,6 +16,7 @@ public class ventClub extends javax.swing.JFrame {
         iconoTorneo = new javax.swing.JLabel();
         etiquetaTorneo = new javax.swing.JLabel();
         etiquetaBienvenida = new javax.swing.JLabel();
+        botonMenuJugador = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -75,15 +76,28 @@ public class ventClub extends javax.swing.JFrame {
                 .addContainerGap(130, Short.MAX_VALUE))
         );
 
+        botonMenuJugador.setBackground(new java.awt.Color(255, 255, 255));
+        botonMenuJugador.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/logoJugador.png"))); // NOI18N
+        botonMenuJugador.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonMenuJugadorActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout panelJugadorLayout = new javax.swing.GroupLayout(panelJugador);
         panelJugador.setLayout(panelJugadorLayout);
         panelJugadorLayout.setHorizontalGroup(
             panelJugadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelJugadorLayout.createSequentialGroup()
                 .addComponent(panelLogo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 521, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 621, Short.MAX_VALUE)
                 .addComponent(botonCerrar)
                 .addContainerGap())
+            .addGroup(panelJugadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(panelJugadorLayout.createSequentialGroup()
+                    .addGap(386, 386, 386)
+                    .addComponent(botonMenuJugador, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(453, Short.MAX_VALUE)))
         );
         panelJugadorLayout.setVerticalGroup(
             panelJugadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -92,6 +106,11 @@ public class ventClub extends javax.swing.JFrame {
                 .addComponent(botonCerrar)
                 .addContainerGap(414, Short.MAX_VALUE))
             .addComponent(panelLogo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(panelJugadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(panelJugadorLayout.createSequentialGroup()
+                    .addGap(153, 153, 153)
+                    .addComponent(botonMenuJugador, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(231, Short.MAX_VALUE)))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -111,6 +130,10 @@ public class ventClub extends javax.swing.JFrame {
     private void botonCerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCerrarActionPerformed
         System.exit(0);
     }//GEN-LAST:event_botonCerrarActionPerformed
+
+    private void botonMenuJugadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonMenuJugadorActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_botonMenuJugadorActionPerformed
 
     /**
      * @param args the command line arguments
@@ -156,6 +179,7 @@ public class ventClub extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton botonCerrar;
+    private javax.swing.JButton botonMenuJugador;
     private javax.swing.JLabel etiquetaBienvenida;
     private javax.swing.JLabel etiquetaTorneo;
     private javax.swing.JLabel iconoTorneo;
